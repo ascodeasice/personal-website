@@ -10,7 +10,6 @@ const Link = ({ children }) => {
     // problem: how to make it reusable? how to make it two directional
     const scrollToArea = () => {
         // TODO: scroll to area
-        // TODO: pass area/y-coord to Link to scroll there
         setInArea(true);
     }
 
