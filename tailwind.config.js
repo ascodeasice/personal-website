@@ -10,5 +10,7 @@ module.exports = {
       "custom-red": "#ce1212",
     },
   },
-  plugins: [],
+  plugins: [
+    require('@shrutibalasa/tailwind-grid-auto-fit'),
+  ],
 }
