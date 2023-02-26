@@ -10,7 +10,7 @@ const HomePage = () => {
             </div>
             <div className="absolute bottom-0 mx-auto  inset-x-0 w-fit h-fit grid grid-rows-2 justify-items-center">
                 <p className="text-beige text-3xl mb-4">See more</p>
-                <img src={Arrow} className="bg-beige animate-bounce rounded-full w-8 h-8" />
+                <img src={Arrow} className="bg-beige animate-bounce rounded-full w-8 h-8 hover:cursor-pointer" />
             </div>
         </div>
     );

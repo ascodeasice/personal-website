@@ -7,7 +7,7 @@ const Header = () => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     return (
-        <header className="bg-maroon h-[10vh] grid grid-cols-2 items-center fixed w-full">
+        <header className="bg-maroon h-[10vh] grid grid-cols-2 items-center fixed w-full z-50">
             <div className="grid grid-cols-[repeat(4,min-content)] gap-x-8 ml-8">
                 <Link>About</Link>
                 <Link>Skills</Link>
