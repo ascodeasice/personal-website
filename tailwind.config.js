@@ -8,6 +8,7 @@ module.exports = {
       "black": "#1b1717",
       "beige": "#eeebdd",
       "custom-red": "#ce1212",
+      "gray": "rgb(156 163 175) ",
     },
   },
   plugins: [

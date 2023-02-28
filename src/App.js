@@ -3,6 +3,7 @@ import HomePage from "./components/HomePage/HomePage";
 import AboutPage from "./components/AboutPage/AboutPage";
 import SkillPage from "./components/SkillPage/SkillPage";
 import ProjectSection from "./components/ProjectPage/ProjectSection";
+import ContactPage from "./components/ContactPage/ContactPage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <AboutPage />
       <SkillPage />
       <ProjectSection />
+      <ContactPage />
     </>
   );
 }
