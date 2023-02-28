@@ -2,7 +2,23 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        "slide-up": {
+          "0%, 50%": {
+            transform: "translateY(100%)",
+            opacity: "0"
+          },
+          "60%, 100%": {
+            transform: "translateY(0)",
+            opacity: "1"
+          }
+        },
+      }
+    },
+    animation: {
+      "slide-up": 'slide-up 1s ease-out forwards',
+    },
     colors: {
       "maroon": "#810000",
       "black": "#1b1717",
@@ -13,5 +29,6 @@ module.exports = {
   },
   plugins: [
     require('@shrutibalasa/tailwind-grid-auto-fit'),
+    require("tailwindcss-animation-delay"),
   ],
 }

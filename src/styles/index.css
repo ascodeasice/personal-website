@@ -19,3 +19,16 @@ code {
 .underlinedLink {
   text-decoration: underline;
 }
+
+/* use custom animation delay because the class name is dynamic */
+.anim-delay50 {
+  animation-delay: 50ms;
+}
+
+.anim-delay100 {
+  animation-delay: 100ms;
+}
+
+.anim-delay150 {
+  animation-delay: 150ms;
+}
