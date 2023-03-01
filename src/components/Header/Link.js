@@ -14,7 +14,7 @@ const Link = ({ children, delay }) => {
     }
 
     return (
-        <button className={`text-beige hover:underline ${inArea ? "underlinedLink" : ""} ${delay ? `anim-delay${delay}` : " "} animate-slide-up opacity-0`} onClick={scrollToArea}>
+        <button className={`text-beige hover:underline whitespace-nowrap ${inArea ? "underlinedLink" : ""} ${delay ? `anim-delay${delay}` : " "} animate-slide-up opacity-0`} onClick={scrollToArea}>
             {children}
         </button>
     );

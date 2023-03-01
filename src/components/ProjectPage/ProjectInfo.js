@@ -2,8 +2,11 @@ import uniqid from "uniqid";
 import TechBox from "./TechBox";
 import GITHUB from "../../assets/icons/github.svg";
 import WEB from "../../assets/icons/web.svg";
+import { useTranslation } from "react-i18next";
 
 const ProjectInfo = ({ liveLink, githubLink, iconSrcArr }) => {
+    const { t } = useTranslation();
+
     return (
         <>
             <div className="grid items-center gap-x-4 grid-cols-[4rem_min-content]">
@@ -11,7 +14,7 @@ const ProjectInfo = ({ liveLink, githubLink, iconSrcArr }) => {
                     <img src={WEB} className="w-16 h-16 hover:scale-110" />
                 </a>
                 <a href={liveLink} className="text-custom-red whitespace-nowrap underline text-2xl hover:text-maroon">
-                    Live Preview
+                    {t("Live Preview")}
                 </a>
             </div>
             <div className="grid items-center gap-x-4 grid-cols-[4rem_min-content]">
