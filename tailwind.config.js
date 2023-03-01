@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
@@ -14,17 +16,18 @@ module.exports = {
             opacity: "1"
           }
         },
-      }
-    },
-    animation: {
-      "slide-up": 'slide-up 1s ease-out forwards',
-    },
-    colors: {
-      "maroon": "#810000",
-      "black": "#1b1717",
-      "beige": "#eeebdd",
-      "custom-red": "#ce1212",
-      "gray": "rgb(156 163 175) ",
+      },
+      animation: {
+        "slide-up": 'slide-up 1s ease-out forwards',
+        // defaultTheme.animation
+      },
+      colors: {
+        "maroon": "#810000",
+        "black": "#1b1717",
+        "beige": "#eeebdd",
+        "custom-red": "#ce1212",
+        "gray": "rgb(156 163 175) ",
+      },
     },
   },
   plugins: [

@@ -32,3 +32,7 @@ code {
 .anim-delay150 {
   animation-delay: 150ms;
 }
+
+.switchOn {
+  transform: translateX(2rem);
+}
