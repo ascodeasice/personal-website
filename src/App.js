@@ -9,11 +9,19 @@ function App() {
   return (
     <>
       <Header />
-      <HomePage />
-      <AboutPage />
-      <SkillPage />
-      <ProjectSection />
-      <ContactPage />
+      <div className="aboutTrigger">
+        <HomePage />
+        <AboutPage />
+      </div>
+      <div className="skillsTrigger">
+        <SkillPage />
+      </div>
+      <div className="projectTrigger">
+        <ProjectSection />
+      </div>
+      <div className="contactTrigger">
+        <ContactPage />
+      </div>
     </>
   );
 }

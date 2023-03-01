@@ -3,7 +3,7 @@ import { useState } from "react";
 /* NOTE maybe use a int(index) variable in parent component, only allow one 
     linke active at a time is better
 */
-const Link = ({ children, delay }) => {
+const Link = ({ children, delay, className }) => {
     const [inArea, setInArea] = useState(false);
 
     // use a trigger class to detect whether in certain area(maybe page class)
@@ -14,7 +14,7 @@ const Link = ({ children, delay }) => {
     }
 
     return (
-        <button className={`text-beige hover:underline whitespace-nowrap ${inArea ? "underlinedLink" : ""} ${delay ? `anim-delay${delay}` : " "} animate-slide-up opacity-0`} onClick={scrollToArea}>
+        <button className={`text-beige hover:underline whitespace-nowrap ${inArea ? "underlinedLink" : ""} ${delay ? `anim-delay${delay}` : " "} animate-slide-up opacity-0 ${className}`} onClick={scrollToArea}>
             {children}
         </button>
     );

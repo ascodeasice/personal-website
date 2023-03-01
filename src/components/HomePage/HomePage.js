@@ -6,7 +6,8 @@ const HomePage = () => {
     const { t } = useTranslation();
 
     return (
-        <div className="bg-black h-screen">
+        // This class is for trigger about underline in header links
+        <div className=" bg-black h-screen">
             <div className=" absolute m-auto inset-0 h-fit w-fit ">
                 <h1 className="text-beige text-center font-bold text-7xl mb-2">{t("name")}</h1>
                 <Character />

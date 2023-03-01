@@ -6,7 +6,7 @@ import MAIL from "../../assets/icons/mail.svg";
 
 const ContactPage = () => {
     return (
-        <div className="h-screen bg-black grid  pt-[15vh] justify-items-center">
+        <div className="contactTrigger h-screen bg-black grid  pt-[15vh] justify-items-center">
             <div className="grid grid-rows-[min-content_1fr] gap-y-4 w-[70vw]">
 
                 <h1 className="text-beige font-bold text-6xl justify-self-start">Contact</h1>
