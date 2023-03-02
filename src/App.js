@@ -7,7 +7,7 @@ import ContactPage from "./components/ContactPage/ContactPage";
 
 function App() {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <Header />
       <div className="aboutTrigger">
         <HomePage />
@@ -22,7 +22,7 @@ function App() {
       <div className="contactTrigger">
         <ContactPage />
       </div>
-    </>
+    </div>
   );
 }
 
