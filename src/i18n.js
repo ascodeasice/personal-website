@@ -1,8 +1,8 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
-import en from "./locales/en.json"; // 這個路徑可以自己定義，不需要跟筆者一樣
-import zh_tw from "./locales/zh_TW.json";
+import en from "./assets/locales/en.json"; // 這個路徑可以自己定義，不需要跟筆者一樣
+import zh_tw from "./assets/locales/zh_TW.json";
 
 const resources = {
     en: {
