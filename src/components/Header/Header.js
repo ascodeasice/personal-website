@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <header className="bg-maroon h-[10vh] grid grid-cols-2 items-center fixed w-full z-50 shadow-md">
             <div className="grid grid-cols-[repeat(4,min-content)] gap-x-8 ml-8">
-                <Link scrollId="aboutScroll" className={"aboutTarget"}>{t("About")}</Link>
+                <Link scrollId="homeScroll" className={"aboutTarget"}>{t("About")}</Link>
                 <Link scrollId="skillScroll" className={"skillsTarget"} delay="50">{t("Skills")}</Link>
                 <Link scrollId="projectScroll" className={"projectTarget"} delay="100">{t("Project")}</Link>
                 <Link scrollId="contactScroll" className={"contactTarget"} delay="150">{t("Contact")}</Link>
