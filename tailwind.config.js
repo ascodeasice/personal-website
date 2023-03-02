@@ -16,6 +16,26 @@ module.exports = {
             opacity: "1"
           }
         },
+        "slide-left": {
+          "0%, 50%": {
+            transform: "translateX(10%)",
+            opacity: "0"
+          },
+          "60%, 100%": {
+            transform: "translateX(0)",
+            opacity: "1"
+          }
+        },
+        "slide-right": {
+          "0%, 50%": {
+            transform: "translateX(-10%)",
+            opacity: "0"
+          },
+          "60%, 100%": {
+            transform: "translateX(0)",
+            opacity: "1"
+          }
+        },
         "blink": {
           "50%": {
             opacity: "0"
@@ -25,6 +45,8 @@ module.exports = {
       animation: {
         "slide-up": 'slide-up 1s ease-out forwards',
         "blink": "blink 1s  step-start infinite",
+        "slide-left": "slide-left 1s cubic-bezier(0, 0.55, 0.45, 1) forwards",
+        "slide-right": "slide-right 1s cubic-bezier(0, 0.55, 0.45, 1) forwards",
       },
       colors: {
         "maroon": "#810000",
