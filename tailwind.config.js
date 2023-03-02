@@ -16,10 +16,15 @@ module.exports = {
             opacity: "1"
           }
         },
+        "blink": {
+          "50%": {
+            opacity: "0"
+          }
+        }
       },
       animation: {
         "slide-up": 'slide-up 1s ease-out forwards',
-        // defaultTheme.animation
+        "blink": "blink 1s  step-start infinite",
       },
       colors: {
         "maroon": "#810000",

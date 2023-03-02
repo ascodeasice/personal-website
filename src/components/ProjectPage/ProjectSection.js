@@ -46,7 +46,7 @@ const ProjectSection = () => {
     return (
         projects.map((project, index) => {
             if (index == 0) {
-                return <ProjectPage project={project} id="projectScroll"></ProjectPage>
+                return <ProjectPage project={project} id="projectScroll" key={uniqid()}></ProjectPage>
             } else {
                 return <ProjectPage project={project} key={uniqid()} />
             }
