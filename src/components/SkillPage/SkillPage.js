@@ -105,9 +105,9 @@ const SkillPage = () => {
 
     return (
         <div id="skillScroll" className="min-h-screen bg-black grid grid-rows-[repeat(3,min-content)] gap-y-8 justify-items-center pt-[15vh]">
-            <SkillContainer title="Frontend" skills={frontendSkills} />
-            <SkillContainer title="Backend" skills={backendSkills} />
-            <SkillContainer title="Tools" skills={tools} />
+            <SkillContainer num="0" title="Frontend" skills={frontendSkills} />
+            <SkillContainer num="1" title="Backend" skills={backendSkills} />
+            <SkillContainer num="2" title="Tools" skills={tools} />
         </div>
     );
 }

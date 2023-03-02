@@ -1,8 +1,15 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+// for dynamic class name in react component
+
+const animationDelaySafeList = []
+
+for (let i = 0; i < 1000; i += 100) {
+  animationDelaySafeList.push(`animation-delay-${i}`)
+}
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  safelist: animationDelaySafeList,
   theme: {
     extend: {
       keyframes: {
@@ -40,6 +47,29 @@ module.exports = {
           "50%": {
             opacity: "0"
           }
+        },
+        "pop-up": {
+          "0%": {
+            transform: "scale(0)"
+          },
+          "50%": {
+            transform: "scale(1.4)"
+          },
+          "60%": {
+            transform: "scale(1.1)"
+          },
+          "70%": {
+            transform: "scale(1.2)"
+          },
+          "80%": {
+            transform: "scale(1)"
+          },
+          "90%": {
+            transform: "scale(1.1)"
+          },
+          "100%": {
+            transform: "scale(1)",
+          }
         }
       },
       animation: {
@@ -47,6 +77,7 @@ module.exports = {
         "blink": "blink 1s  step-start infinite",
         "slide-left": "slide-left 1s cubic-bezier(0, 0.55, 0.45, 1) forwards",
         "slide-right": "slide-right 1s cubic-bezier(0, 0.55, 0.45, 1) forwards",
+        "pop-up": "pop-up 0.8s  cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards"
       },
       colors: {
         "maroon": "#810000",
