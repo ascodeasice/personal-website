@@ -97,7 +97,7 @@ const SkillPage = () => {
         },
         {
             src: RAILWAY,
-            name: "Railway.app",
+            name: "Railway",
         },
         null,
         null,
