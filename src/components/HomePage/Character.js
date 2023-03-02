@@ -9,7 +9,7 @@ const Character = () => {
 
     const startTypeEffects = () => {
         let currentLanguage = i18n.language;
-        let words = [t("character1"), t("character2")];
+        let words = [t("character1"), t("character2"), t("character3")];
         let arrIndex = 0;
         let textIndex = 0;
         let forward = true;
@@ -21,7 +21,7 @@ const Character = () => {
             let currentWord = words[arrIndex];
             if (i18n.language != currentLanguage) {
                 currentLanguage = i18n.language;
-                words = [t("character1"), t("character2")];
+                words = [t("character1"), t("character2"), t("character3")];
                 currentWord = words[arrIndex];
                 setCurrentText(currentWord);
                 textIndex = currentWord.length;
@@ -65,10 +65,8 @@ const Character = () => {
     return (
         <>
             <h1 className=" text-center font-bold text-5xl text-beige">{t("A")}
-                {/* TODO: have animation to switch between different character text */}
                 <span className="text-custom-red"> {currentText}</span>
                 <span className="text-custom-red animate-blink">|</span>
-                {/* space */}
             </h1>
         </>
     );
