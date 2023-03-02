@@ -64,7 +64,7 @@ const Character = () => {
 
     return (
         <>
-            <h1 className=" text-center font-bold text-5xl text-beige">{t("A")}
+            <h1 className=" text-center font-bold text-5xl text-beige animation-delay-800 animate-slide-up opacity-0">{t("A")}
                 <span className="text-custom-red"> {currentText}</span>
                 <span className="text-custom-red animate-blink">|</span>
             </h1>
