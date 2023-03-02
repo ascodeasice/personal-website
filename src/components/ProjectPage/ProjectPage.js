@@ -1,10 +1,9 @@
 import ProjectImage from "./ProjectImage";
 import ProjectInfo from "./ProjectInfo";
 
-const ProjectPage = ({ project }) => {
-
+const ProjectPage = ({ project, id }) => {
     return (
-        <div className="h-[90vh] bg-black grid justify-items-center pt-[10vh]">
+        <div id={id ? id : ""} className="h-[90vh] bg-black grid justify-items-center pt-[10vh]">
             <div className="w-[80vw] grid grid-cols-2 grid-rows-[repeat(4,min-content)] mt-[10vh]">
                 <h2 className="text-beige col-span-2 text-4xl font-bold mb-4">{project.name}</h2>
                 <ProjectImage src={project.image} />

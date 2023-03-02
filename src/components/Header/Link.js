@@ -1,20 +1,16 @@
-import { useState } from "react";
+const Link = ({ children, delay, className, scrollId }) => {
 
-/* NOTE maybe use a int(index) variable in parent component, only allow one 
-    linke active at a time is better
-*/
-const Link = ({ children, delay, className }) => {
-    const [inArea, setInArea] = useState(false);
-
-    // use a trigger class to detect whether in certain area(maybe page class)
-    // problem: how to make it reusable? how to make it two directional
+    // bad implement, but I think forward ref is tiring 
     const scrollToArea = () => {
-        // TODO: scroll to area
-        setInArea(true);
+        document.getElementById(scrollId).scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest",
+        });
     }
 
     return (
-        <button className={`text-beige hover:underline whitespace-nowrap ${inArea ? "underlinedLink" : ""} ${delay ? `anim-delay${delay}` : " "} animate-slide-up opacity-0 ${className}`} onClick={scrollToArea}>
+        <button className={`text-beige hover:underline whitespace-nowrap ${delay ? `anim-delay${delay}` : " "} animate-slide-up opacity-0 ${className}`} onClick={scrollToArea}>
             {children}
         </button>
     );

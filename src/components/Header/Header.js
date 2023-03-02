@@ -19,10 +19,10 @@ const Header = () => {
     return (
         <header className="bg-maroon h-[10vh] grid grid-cols-2 items-center fixed w-full z-50 shadow-md">
             <div className="grid grid-cols-[repeat(4,min-content)] gap-x-8 ml-8">
-                <Link className={"aboutTarget"}>{t("About")}</Link>
-                <Link className={"skillsTarget"} delay="50">{t("Skills")}</Link>
-                <Link className={"projectTarget"} delay="100">{t("Project")}</Link>
-                <Link className={"contactTarget"} delay="150">{t("Contact")}</Link>
+                <Link scrollId="aboutScroll" className={"aboutTarget"}>{t("About")}</Link>
+                <Link scrollId="skillScroll" className={"skillsTarget"} delay="50">{t("Skills")}</Link>
+                <Link scrollId="projectScroll" className={"projectTarget"} delay="100">{t("Project")}</Link>
+                <Link scrollId="contactScroll" className={"contactTarget"} delay="150">{t("Contact")}</Link>
             </div>
             <div className="flex justify-end mr-8 gap-x-2 items-center">
                 <p className="text-beige font-bold text-3xl animate-slide-up animation-delay-200 opacity-0">TW</p>
