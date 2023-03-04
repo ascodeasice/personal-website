@@ -73,10 +73,15 @@ module.exports = {
         },
         "image-slide-right": {
           "0%": {
-            transform: "translateX(-20%)"
+            transform: "translateX(-20%)",
+            opacity: "0"
+          },
+          "0.01%": {
+            opacity: "1"
           },
           "100%": {
-            transform: "translateX(0)"
+            transform: "translateX(0)",
+            opacity: "1"
           }
         }
       },

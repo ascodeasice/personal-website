@@ -3,31 +3,30 @@ import TechBox from "./TechBox";
 import GITHUB from "../../assets/icons/github.svg";
 import WEB from "../../assets/icons/web.svg";
 import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
+import scrollTrigger from "../../functions/scrollTrigger";
+import InfoRow from "./InfoRow";
 
-const ProjectInfo = ({ liveLink, githubLink, iconSrcArr }) => {
+const ProjectInfo = ({ liveLink, githubLink, iconSrcArr, num }) => {
     const { t } = useTranslation();
+    const [previewText, setPreviewText] = useState(t("Live Preview"));
+
+    useEffect(() => {
+        // to update info row as the language changes
+        setPreviewText(t("Live Preview"));
+
+        // add animation scroll triggers
+        scrollTrigger(`.info-row-${num}-1`, `.info-row-${num}-1`, "animate-slide-up", 0.25, false);
+        scrollTrigger(`.info-row-${num}-2`, `.info-row-${num}-2`, "animate-slide-up", 0.25, false);
+    }, [t]);
 
     return (
         <>
-            <div className="grid items-center gap-x-4 grid-cols-[4rem_min-content]">
-                <a href={liveLink}>
-                    <img src={WEB} className="w-16 h-16 hover:scale-110 transition" />
-                </a>
-                <a href={liveLink} className="text-custom-red whitespace-nowrap underline text-2xl hover:text-maroon">
-                    {t("Live Preview")}
-                </a>
-            </div>
-            <div className="grid items-center gap-x-4 grid-cols-[4rem_min-content]">
-                <a href={githubLink}>
-                    <img src={GITHUB} className="w-16 invert hover:scale-110 transition" />
-                </a>
-                <a href={githubLink} className="text-custom-red whitespace-nowrap underline text-2xl hover:text-maroon">
-                    Github
-                </a>
-            </div>
+            <InfoRow className={`info-row-${num}-1`} src={WEB} link={liveLink} text={previewText} />
+            <InfoRow className={`info-row-${num}-2`} src={GITHUB} link={githubLink} text="Github" inverted={true} />
             <div className="grid grid-auto-fit-[4rem] h-fit self-end">
                 {
-                    iconSrcArr.map((src) => <TechBox src={src} key={uniqid()} />)
+                    iconSrcArr.map((src, index) => <TechBox src={src} key={uniqid()} className={`tech-box-${num}-${index}`} />)
                 }
             </div>
         </>
