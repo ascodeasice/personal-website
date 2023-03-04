@@ -11,7 +11,7 @@ const ProjectInfo = ({ liveLink, githubLink, iconSrcArr }) => {
         <>
             <div className="grid items-center gap-x-4 grid-cols-[4rem_min-content]">
                 <a href={liveLink}>
-                    <img src={WEB} className="w-16 h-16 hover:scale-110" />
+                    <img src={WEB} className="w-16 h-16 hover:scale-110 transition" />
                 </a>
                 <a href={liveLink} className="text-custom-red whitespace-nowrap underline text-2xl hover:text-maroon">
                     {t("Live Preview")}
@@ -19,7 +19,7 @@ const ProjectInfo = ({ liveLink, githubLink, iconSrcArr }) => {
             </div>
             <div className="grid items-center gap-x-4 grid-cols-[4rem_min-content]">
                 <a href={githubLink}>
-                    <img src={GITHUB} className="w-16 invert hover:scale-110" />
+                    <img src={GITHUB} className="w-16 invert hover:scale-110 transition" />
                 </a>
                 <a href={githubLink} className="text-custom-red whitespace-nowrap underline text-2xl hover:text-maroon">
                     Github

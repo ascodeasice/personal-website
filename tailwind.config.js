@@ -70,11 +70,20 @@ module.exports = {
           "100%": {
             transform: "scale(1)",
           }
+        },
+        "image-slide-right": {
+          "0%": {
+            transform: "translateX(-20%)"
+          },
+          "100%": {
+            transform: "translateX(0)"
+          }
         }
       },
       animation: {
         "slide-up": 'slide-up 1s ease-out forwards',
         "blink": "blink 1s  step-start infinite",
+        "image-slide-right": "image-slide-right .3s cubic-bezier(0, 0.55, 0.45, 1) forwards",
         "slide-left": "slide-left 1s cubic-bezier(0, 0.55, 0.45, 1) forwards",
         "slide-right": "slide-right 1s cubic-bezier(0, 0.55, 0.45, 1) forwards",
         "pop-up": "pop-up 0.8s  cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards"
