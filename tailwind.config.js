@@ -83,6 +83,16 @@ module.exports = {
             transform: "translateX(0)",
             opacity: "1"
           }
+        },
+        "contact-slide-right": {
+          "0%": {
+            transform: "translateX(-50px)",
+            opacity: "0"
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1"
+          }
         }
       },
       animation: {
@@ -91,6 +101,7 @@ module.exports = {
         "image-slide-right": "image-slide-right .3s cubic-bezier(0, 0.55, 0.45, 1) forwards",
         "slide-left": "slide-left 1s cubic-bezier(0, 0.55, 0.45, 1) forwards",
         "slide-right": "slide-right 1s cubic-bezier(0, 0.55, 0.45, 1) forwards",
+        "contact-slide-right": "contact-slide-right .5s ease-out forwards",
         "pop-up": "pop-up 0.8s  cubic-bezier(0.68, -0.6, 0.32, 1.6) forwards"
       },
       colors: {
