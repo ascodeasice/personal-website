@@ -18,6 +18,8 @@ import WEBPACK from "../../assets/icons/tools/webpack.svg";
 import JEST from "../../assets/icons/tools/jest.svg";
 import RAILWAY from "../../assets/icons/tools/railway.svg";
 
+import { useTranslation } from "react-i18next";
+
 const SkillPage = () => {
     const frontendSkills = [
         {
@@ -103,8 +105,11 @@ const SkillPage = () => {
         null,
     ];
 
+    const { t } = useTranslation();
+
     return (
-        <div id="skillScroll" className="min-h-screen bg-black grid grid-rows-[repeat(3,min-content)] gap-y-8 justify-items-center pt-[15vh]">
+        <div id="skillScroll" className="min-h-screen bg-black grid grid-rows-[repeat(4,min-content)] gap-y-8 justify-items-center pt-[15vh]">
+            <h1 className="text-beige text-7xl max-sm:text-5xl font-bold">{t("Skills")}</h1>
             <SkillContainer num="0" title="Frontend" skills={frontendSkills} />
             <SkillContainer num="1" title="Backend" skills={backendSkills} />
             <SkillContainer num="2" title="Tools" skills={tools} />
