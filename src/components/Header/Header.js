@@ -21,7 +21,7 @@ const Header = () => {
             <div className="grid grid-cols-[repeat(4,min-content)] gap-x-8 ml-8">
                 <Link scrollId="homeScroll" className={"aboutTarget"}>{t("About")}</Link>
                 <Link scrollId="skillScroll" className={"skillsTarget"} delay="50">{t("Skills")}</Link>
-                <Link scrollId="projectScroll" className={"projectTarget"} delay="100">{t("Project")}</Link>
+                <Link scrollId="project-scroll-0" className={"projectTarget"} delay="100">{t("Project")}</Link>
                 <Link scrollId="contactScroll" className={"contactTarget"} delay="150">{t("Contact")}</Link>
             </div>
             <div className="flex justify-end mr-8 gap-x-2 items-center">

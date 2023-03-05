@@ -2,9 +2,13 @@ import ProjectImage from "./ProjectImage";
 import ProjectInfo from "./ProjectInfo";
 import scrollTrigger from "../../functions/scrollTrigger";
 import ClickMe from "./ClickMe";
+import NextProjectButton from "./NextProjectButton";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-const ProjectPage = ({ project, id, num }) => {
+const ProjectPage = ({ project, id, num, isLast }) => {
+    const { t } = useTranslation();
+
     useEffect(() => {
         scrollTrigger(`.project-title-${num}`, `.project-title-${num}`, "animate-slide-up", 0.25, false);
     }, []);
@@ -16,6 +20,10 @@ const ProjectPage = ({ project, id, num }) => {
                 <ProjectImage images={project.images} num={num} />
                 <ProjectInfo iconSrcArr={project.teches} liveLink={project.liveLink} githubLink={project.githubLink} num={num} />
                 <ClickMe />
+                {
+                    isLast ? <NextProjectButton scrollId="contactScroll" text={t("Contact Me")} /> :
+                        <NextProjectButton scrollId={`project-scroll-${num + 1}`} text={t("Next Project")} />
+                }
             </div>
         </div>
     );
