@@ -111,6 +111,9 @@ module.exports = {
         "custom-red": "#ce1212",
         "gray": "rgb(156 163 175) ",
       },
+      screens: {
+        'project-break': '830px'
+      }
     },
   },
   plugins: [

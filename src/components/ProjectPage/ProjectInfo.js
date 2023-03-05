@@ -24,7 +24,7 @@ const ProjectInfo = ({ liveLink, githubLink, iconSrcArr, num }) => {
         <>
             <InfoRow className={`info-row-${num}-1`} src={WEB} link={liveLink} text={previewText} />
             <InfoRow className={`info-row-${num}-2`} src={GITHUB} link={githubLink} text="Github" inverted={true} />
-            <div className="grid grid-auto-fit-[4rem] h-fit self-end">
+            <div className="grid grid-auto-fit-[4rem] h-fit self-end max-project-break:col-span-2">
                 {
                     iconSrcArr.map((src, index) => <TechBox src={src} key={uniqid()} className={`tech-box-${num}-${index}`} />)
                 }

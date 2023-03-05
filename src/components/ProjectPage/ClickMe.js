@@ -12,7 +12,7 @@ const ClickMe = ({ num }) => {
     }, [t]);
 
     return (
-        <div className={`flex mt-4 ${className} opacity-0 animation-delay-900`}>
+        <div className={`max-project-break:row-start-3 flex mt-4 ${className} opacity-0 animation-delay-900`}>
             <p className="text-beige text-xs">{t("Click Me")}</p>
             <img src={ARROW} className="rotate-180 w-4 h-4" />
         </div>

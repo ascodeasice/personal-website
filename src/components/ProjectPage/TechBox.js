@@ -13,7 +13,7 @@ const TechBox = ({ src, className }) => {
     }, [t]);
 
     return (
-        <img className={`${className} w-20 h-20 p-2 bg-beige hover:bg-maroon transition-colors self-end hover:scale-110 transition animation-delay-${delayTime} opacity-0`} src={src} />
+        <img className={`${className} max-[450px]:w-12 max-[450px]:h-12 w-20 h-20 p-2 bg-beige hover:bg-maroon transition-colors self-end hover:scale-110 transition animation-delay-${delayTime} opacity-0`} src={src} />
     );
 }
 

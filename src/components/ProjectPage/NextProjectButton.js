@@ -30,7 +30,7 @@ const NextProjectButton = ({ scrollId, text, num }) => {
     }, [t]);
 
     return (
-        <div onClick={scrollToId} className={`${className} flex items-center mt-4 gap-x-2 cursor-pointer animation-delay-900 opacity-0`}>
+        <div onClick={scrollToId} className={`${className} flex items-center mt-4 gap-x-2 cursor-pointer animation-delay-900 opacity-0 max-project-break:row-start-3`}>
             <p className="text-beige text-sm hover:text-custom-red">{text}</p>
             <img src={arrowSrc} onMouseOver={onHover} onMouseLeave={onLeave} className=" bg-beige hover:bg-maroon rounded-full w-4 h-4" />
         </div>

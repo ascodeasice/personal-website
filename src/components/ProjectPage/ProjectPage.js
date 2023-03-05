@@ -14,9 +14,9 @@ const ProjectPage = ({ project, id, num, isLast }) => {
     }, []);
 
     return (
-        <div id={id ? id : ""} className="h-[90vh] bg-black grid justify-items-center pt-[10vh]">
-            <div className="w-[80vw] grid grid-cols-2 grid-rows-[repeat(5,min-content)] mt-[10vh] gap-x-4">
-                <h2 className={`project-title-${num} text-beige col-span-2 text-4xl font-bold mb-4 opacity-0`}>{project.name}</h2>
+        <div id={id ? id : ""} className="min-h-[90vh] bg-black grid justify-items-center pt-[10vh]">
+            <div className="w-[80vw] grid grid-cols-2 grid-rows-[repeat(5,min-content)] mt-[10vh] gap-x-4 max-project-break:gap-y-2">
+                <h2 className={`max-[450px]:text-2xl project-title-${num} text-beige col-span-2 text-4xl font-bold mb-4 opacity-0`}>{project.name}</h2>
                 <ProjectImage images={project.images} num={num} />
                 <ProjectInfo iconSrcArr={project.teches} liveLink={project.liveLink} githubLink={project.githubLink} num={num} />
                 <ClickMe num={num} />
