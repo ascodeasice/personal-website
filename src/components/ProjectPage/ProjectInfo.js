@@ -16,8 +16,8 @@ const ProjectInfo = ({ liveLink, githubLink, iconSrcArr, num }) => {
         setPreviewText(t("Live Preview"));
 
         // add animation scroll triggers
-        scrollTrigger(`.info-row-${num}-1`, `.info-row-${num}-1`, "animate-slide-up", 0.25, false);
-        scrollTrigger(`.info-row-${num}-2`, `.info-row-${num}-2`, "animate-slide-up", 0.25, false);
+        scrollTrigger(`.info-row-${num}-1`, `.info-row-${num}-1`, "animate-slide-left", 0.25, false);
+        scrollTrigger(`.info-row-${num}-2`, `.info-row-${num}-2`, "animate-slide-right", 0.25, false);
     }, [t]);
 
     return (

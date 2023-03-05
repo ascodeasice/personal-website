@@ -26,7 +26,7 @@ const ProjectImage = ({ images, num }) => {
     }, [imageIndex]);
 
     return (
-        <img className={`project-image-${num} h-[50vh] row-span-3 cursor-pointer opacity-0 ${switching ? "animate-image-slide-right" : ""}`} src={images[imageIndex]} onClick={switchImage} />
+        <img className={`project-image-${num} h-[50vh] row-span-3 cursor-pointer opacity-0 ${switching ? "animate-image-slide-right" : ""} animation-delay-200`} src={images[imageIndex]} onClick={switchImage} />
     );
 }
 

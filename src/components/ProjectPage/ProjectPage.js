@@ -19,10 +19,10 @@ const ProjectPage = ({ project, id, num, isLast }) => {
                 <h2 className={`project-title-${num} text-beige col-span-2 text-4xl font-bold mb-4 opacity-0`}>{project.name}</h2>
                 <ProjectImage images={project.images} num={num} />
                 <ProjectInfo iconSrcArr={project.teches} liveLink={project.liveLink} githubLink={project.githubLink} num={num} />
-                <ClickMe />
+                <ClickMe num={num} />
                 {
-                    isLast ? <NextProjectButton scrollId="contactScroll" text={t("Contact Me")} /> :
-                        <NextProjectButton scrollId={`project-scroll-${num + 1}`} text={t("Next Project")} />
+                    isLast ? <NextProjectButton num={num} scrollId="contactScroll" text={t("Contact Me")} /> :
+                        <NextProjectButton num={num} scrollId={`project-scroll-${num + 1}`} text={t("Next Project")} />
                 }
             </div>
         </div>

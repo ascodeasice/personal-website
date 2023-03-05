@@ -1,6 +1,6 @@
 const InfoRow = ({ src, link, text, inverted, className }) => {
     return (
-        <div className={`grid items-center gap-x-4 grid-cols-[4rem_min-content] opacity-0 ${className}`}>
+        <div className={`grid items-center gap-x-4 grid-cols-[4rem_min-content] opacity-0 ${className} animation-delay-300`}>
             <a href={link} target="_blank">
                 <img src={src} className={`${inverted ? "invert" : ""} w-16 hover:scale-110 transition`} />
             </a>

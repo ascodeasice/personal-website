@@ -7,8 +7,8 @@ const TechBox = ({ src, className }) => {
     const { t } = useTranslation();
 
     useEffect(() => {
-        // 0~300
-        setDelayTime(Math.floor(Math.random() * 4) * 100);
+        // 400~700
+        setDelayTime(400 + Math.floor(Math.random() * 4) * 100);
         scrollTrigger(`.${className}`, `.${className}`, "animate-slide-up", 0, false);
     }, [t]);
 
