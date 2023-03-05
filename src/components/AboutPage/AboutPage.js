@@ -13,7 +13,7 @@ const AboutPage = () => {
     return (
         <div id="aboutScroll" className="bg-black h-screen">
             <div className="pt-[15vh] grid grid-rows-[repeat(2,min-content)] justify-items-center ">
-                <h1 className=" aboutTitle text-beige font-bold text-7xl text-center mb-4 opacity-0">{t("About Me")}</h1>
+                <h1 className=" max-md:text-5xl aboutTitle text-beige font-bold text-7xl text-center mb-4 opacity-0">{t("About Me")}</h1>
                 <AboutText />
             </div>
         </div>
