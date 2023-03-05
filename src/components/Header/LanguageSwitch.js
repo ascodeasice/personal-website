@@ -19,11 +19,9 @@ const LanguageSwitch = () => {
     }
 
     return (
-        <div>
-            <button onClick={handleClick} className="rounded-full bg-black w-16 h-8 flex items-center px-1 animate-slide-up animation-delay-300 opacity-0" >
-                <div className={`rounded-full bg-beige w-6 h-6 transition ${language == "en" ? "switchOn" : " "}`}></div>
-            </button>
-        </div>
+        <button onClick={handleClick} className="rounded-full bg-black w-16 h-8 flex items-center px-1 animate-slide-up animation-delay-300 opacity-0" >
+            <div className={`rounded-full bg-beige w-6 h-6 transition ${language == "en" ? "switchOn" : " "}`}></div>
+        </button>
     );
 }
 

@@ -17,14 +17,14 @@ const Header = () => {
     }, []);
 
     return (
-        <header className="bg-maroon h-[10vh] grid grid-cols-2 items-center fixed w-full z-50 shadow-md">
-            <div className="grid grid-cols-[repeat(4,min-content)] gap-x-8 ml-8">
+        <header className="bg-maroon h-[10vh] grid grid-cols-2 max-sm:grid-cols-1 max-sm:justify-items-center items-center fixed w-full z-50 shadow-md">
+            <div className="grid grid-cols-[repeat(4,min-content)] gap-x-8 sm:ml-8">
                 <Link scrollId="homeScroll" className={"aboutTarget"}>{t("About")}</Link>
                 <Link scrollId="skillScroll" className={"skillsTarget"} delay="50">{t("Skills")}</Link>
                 <Link scrollId="project-scroll-0" className={"projectTarget"} delay="100">{t("Project")}</Link>
                 <Link scrollId="contactScroll" className={"contactTarget"} delay="150">{t("Contact")}</Link>
             </div>
-            <div className="flex justify-end mr-8 gap-x-2 items-center">
+            <div className="flex justify-end gap-x-2 items-center sm:mr-8">
                 <p className="text-beige font-bold text-3xl animate-slide-up animation-delay-200 opacity-0">TW</p>
                 <LanguageSwitch />
                 <p className="text-beige font-bold text-3xl animate-slide-up animation-delay-400 opacity-0">EN</p>
