@@ -1,9 +1,12 @@
-import Arrow from "../../assets/icons/arrow.svg";
+import ARROW from "../../assets/icons/arrow.svg";
+import WHITE_ARROW from "../../assets/icons/whiteArrow.svg";
 import Character from "./Character";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
 
 const HomePage = () => {
     const { t } = useTranslation();
+    const [arrowSrc, setArrowSrc] = useState(ARROW);
 
     const scrollToAboutPage = () => {
         document.getElementById("aboutScroll").scrollIntoView({
@@ -11,6 +14,14 @@ const HomePage = () => {
             block: "center",
             inline: "nearest",
         });
+    }
+
+    const onHoverImg = () => {
+        setArrowSrc(WHITE_ARROW);
+    }
+
+    const onLeaveImg = () => {
+        setArrowSrc(ARROW);
     }
 
     return (
@@ -22,7 +33,7 @@ const HomePage = () => {
             </div>
             <div className="absolute bottom-0 mx-auto  inset-x-0 w-fit h-fit grid grid-rows-2 justify-items-center animation-delay-1000 animate-slide-up opacity-0">
                 <p className="text-beige text-3xl mb-4">{t("See more")}</p>
-                <img onClick={scrollToAboutPage} src={Arrow} className="bg-beige animate-bounce rounded-full w-8 h-8 hover:cursor-pointer hover:bg-gray" />
+                <img onClick={scrollToAboutPage} onMouseOver={onHoverImg} onMouseLeave={onLeaveImg} src={arrowSrc} className="hover:bg-custom-red bg-beige animate-bounce rounded-full w-8 h-8 hover:cursor-pointer" />
             </div>
         </div>
     );
