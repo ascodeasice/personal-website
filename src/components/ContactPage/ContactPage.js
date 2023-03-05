@@ -17,7 +17,7 @@ const ContactPage = () => {
     return (
         <div id="contactScroll" className="contactTrigger h-screen bg-black grid  pt-[15vh] justify-items-center">
             <div className="grid grid-rows-[min-content_1fr] gap-y-4 w-[70vw]">
-                <h1 className="contact-title text-beige font-bold text-6xl justify-self-start opacity-0">{t("Contact")}</h1>
+                <h1 className="max-[450px]:text-5xl contact-title text-beige font-bold text-6xl justify-self-start opacity-0">{t("Contact")}</h1>
                 <div className="contact-container bg-beige grid grid-rows-3 h-[60vh] p-8 opacity-0">
                     <ContactRow src={GITHUB} href="#" text="Github" num={0} />
                     <ContactRow src={LINKEDIN} href="#" text="LinkedIn" num={1} />
