@@ -5,7 +5,6 @@ import JS from "../../assets/icons/frontendSkills/js.svg";
 import PUG from "../../assets/icons/frontendSkills/pug.svg";
 import TAILWIND from "../../assets/icons/frontendSkills/tailwind.svg";
 import REACT from "../../assets/icons/frontendSkills/react.svg";
-import BOOTSTRAP from "../../assets/icons/frontendSkills/bootstrap.svg";
 import EXPRESS from "../../assets/icons/backendSkills/express.svg";
 import FIREBASE from "../../assets/icons/backendSkills/firebase.svg";
 import MONGODB from "../../assets/icons/backendSkills/mongodb.svg";
@@ -17,6 +16,10 @@ import NPM from "../../assets/icons/tools/npm.svg";
 import WEBPACK from "../../assets/icons/tools/webpack.svg";
 import JEST from "../../assets/icons/tools/jest.svg";
 import RAILWAY from "../../assets/icons/tools/railway.svg";
+import DOCKER from '../../assets/icons/tools/docker.svg'
+import CHAKRA from '../../assets/icons/frontendSkills/chakra.svg'
+import CYPRESS from '../../assets/icons/tools/cypress.svg'
+import VITE from '../../assets/icons/tools/vite.svg'
 
 import { useTranslation } from "react-i18next";
 
@@ -47,8 +50,8 @@ const SkillPage = () => {
             name: "Tailwind",
         },
         {
-            src: BOOTSTRAP,
-            name: "Bootstrap",
+            src: CHAKRA,
+            name: "Chakra UI",
         },
     ];
 
@@ -98,11 +101,17 @@ const SkillPage = () => {
             name: "Jest",
         },
         {
-            src: RAILWAY,
-            name: "Railway",
+            src: VITE,
+            name: "Vite",
         },
-        null,
-        null,
+        {
+            src:DOCKER,
+            name:"Docker"
+        },
+        {
+            src:CYPRESS,
+            name:'Cypress'
+        },
     ];
 
     const { t } = useTranslation();
