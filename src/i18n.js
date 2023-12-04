@@ -13,7 +13,12 @@ const resources = {
     },
 };
 
-let lang = navigator.language || navigator.userLanguage;
+let lang = localStorage.getItem("language");
+
+if (!lang) {
+    lang = navigator.language || navigator.userLanguage;
+    localStorage.setItem("language", lang);
+}
 
 const availableLanguages = ["en", "zh-TW"];
 

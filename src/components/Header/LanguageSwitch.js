@@ -5,17 +5,16 @@ const LanguageSwitch = () => {
     const [language, setLanguage] = useState(i18n.language);
 
     const handleClick = () => {
+        let newLang = "en";
         if (language == "en") {
-            setLanguage("zh-TW");
-            i18n.changeLanguage("zh-TW")
-        } else if (language == "zh-TW") {
-            setLanguage("en");
-            i18n.changeLanguage("en")
-        } else {
+            newLang = "zh-TW";
+        } else if (language != "zh-TW") {
             console.log("Invalid language:" + language);
-            setLanguage("en");
-            i18n.changeLanguage("en");
         }
+
+        localStorage.setItem("language", newLang);
+        setLanguage(newLang);
+        i18n.changeLanguage(newLang);
     }
 
     return (
