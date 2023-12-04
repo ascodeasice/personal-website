@@ -37,13 +37,6 @@ const ProjectSection = () => {
             githubLink: "https://github.com/ascodeasice/insta-clone",
         },
         {
-            name: "Facebook Clone",
-            images: [FACEBOOK1, FACEBOOK2, FACEBOOK3, FACEBOOK4],
-            teches: [PUG, TAILWIND, EXPRESS, MONGODB],
-            liveLink: "https://facebook-clone-ascodeasice.up.railway.app/",
-            githubLink: "https://github.com/ascodeasice/facebook-clone",
-        },
-        {
             name: "Where is Waldo",
             images: [WALDO1, WALDO2, WALDO3, WALDO4],
             teches: [REACT, FIREBASE, JS, GIT],
